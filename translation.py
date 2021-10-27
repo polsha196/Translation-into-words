@@ -1,8 +1,19 @@
 #-*-coding: cp1251-*-
-n=int(input())
 b=''
 c=''
 d=''
+#проверка введеных данных
+while True: 
+	n=input("Введите число от 1 до 9999: ")
+	try:
+		val=int(n)
+		if 0<int(n)<=9999:
+			break
+		else:
+			raise ValueError
+	except ValueError:
+		print("Введено некорректное число! Попробуйте еще раз")
+n=int(n)	
 if n%10==1:
 	a='один рубль'
 elif n%10==2:
@@ -19,7 +30,7 @@ elif n%10==7:
 	a='семь рублей'
 elif n%10==8:
 	a='восемь рублей'
-elif n%10==9:
+elif n%10==9:	
 	a='девять рублей'
 else:
 	a='рублей'
@@ -51,7 +62,7 @@ elif n%10==3:
 	b='тридцать '
 elif n%10==4:
 	b='сорок '
-elif n%10==5:
+elif n%10==5:		
 	b='пятьдесят '
 elif n%10==6:
 	b='шестьдесят '
@@ -106,3 +117,4 @@ elif n%10==9:
 else:
 	d=''
 print(d + с + b + a)
+
